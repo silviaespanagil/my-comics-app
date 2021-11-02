@@ -76,6 +76,7 @@
 		47F55D1F271DC6AD00F5A07C /* SearchCharacterUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55D1E271DC6AD00F5A07C /* SearchCharacterUseCaseUnitTests.swift */; };
 		47F55D21271DC82000F5A07C /* RemoteSearchDataSourceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55D20271DC82000F5A07C /* RemoteSearchDataSourceUnitTests.swift */; };
 		47F55D23271DC97900F5A07C /* SearchRepositoryImplementationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55D22271DC97900F5A07C /* SearchRepositoryImplementationUnitTests.swift */; };
+		A70F1C9427319DC60079DECC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70F1C9327319DC60079DECC /* Constants.swift */; };
 		A7C0B6792721A01E003836F4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B6782721A01E003836F4 /* TabBar.swift */; };
 		A7C0B67C2721A24D003836F4 /* FavoriteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B67B2721A24D003836F4 /* FavoriteListView.swift */; };
 		A7FABC962729988D0028012E /* ExistCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FABC952729988D0028012E /* ExistCharacterUseCase.swift */; };
@@ -171,6 +172,7 @@
 		47F55D1E271DC6AD00F5A07C /* SearchCharacterUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCharacterUseCaseUnitTests.swift; sourceTree = "<group>"; };
 		47F55D20271DC82000F5A07C /* RemoteSearchDataSourceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSearchDataSourceUnitTests.swift; sourceTree = "<group>"; };
 		47F55D22271DC97900F5A07C /* SearchRepositoryImplementationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryImplementationUnitTests.swift; sourceTree = "<group>"; };
+		A70F1C9327319DC60079DECC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A7C0B6782721A01E003836F4 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A7C0B67B2721A24D003836F4 /* FavoriteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListView.swift; sourceTree = "<group>"; };
 		A7FABC952729988D0028012E /* ExistCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistCharacterUseCase.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				47B7BF9C271EFCDE00D4491C /* Scenes */,
 				47F55D0E271DC20B00F5A07C /* UseCases */,
 				47B7BFA7271F050C00D4491C /* Views */,
+				A70F1C9327319DC60079DECC /* Constants.swift */,
 			);
 			path = MyComics;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				47F55D14271DC28E00F5A07C /* RemoteSearchDataSource.swift in Sources */,
 				47F55CD1271DBA8000F5A07C /* MyComicsApp.swift in Sources */,
 				47904EF8272308F50012E8C0 /* LocalCharacterDataSource.swift in Sources */,
+				A70F1C9427319DC60079DECC /* Constants.swift in Sources */,
 				47434BDC272165E200C57209 /* ServerBaseResponse.swift in Sources */,
 				47904EFA272309FC0012E8C0 /* GetCharactersUseCase.swift in Sources */,
 				4760BEF0272AE2DD001F8A5D /* Tab.swift in Sources */,
