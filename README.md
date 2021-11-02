@@ -86,6 +86,17 @@ Prior to this project my experience in doing unitary test has been almost unexis
 
 I definetly need to keep digging into the testing as I still find it really hard and takes me lots of time. Combine a CoreData are huge challenges, they are SUPER important, and without them the app would just not work. Both the Combine and CoreData implementations were done by my mentor so I would definetly love to practice them on my own in order to be able to develop them by myself. 
 
+## Want to clone this repo? 🐑
+
+If you want to clone this repo please feel free to. There's one file missing called "Constants" if you want the code to compile correctly you will need to create a file with this name and add this struct, take into consideration that you will need to assign the apiKey constant your own API key.
+
+```
+struct Constants {
+    
+    static let baseURL = "https://comicvine.gamespot.com/api/"
+    static let apiKey = "yourApiKey"
+}
+```
 
 ## Codefactor 
 [![CodeFactor](https://www.codefactor.io/repository/github/silviaespanagil/my-comics-app/badge/main)](https://www.codefactor.io/repository/github/silviaespanagil/my-comics-app/overview/main)
