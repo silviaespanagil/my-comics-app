@@ -65,7 +65,6 @@
 		47F55CD8271DBA8500F5A07C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F55CD7271DBA8500F5A07C /* Preview Assets.xcassets */; };
 		47F55CEC271DBA8500F5A07C /* MyComicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55CEB271DBA8500F5A07C /* MyComicsUITests.swift */; };
 		47F55CEE271DBA8500F5A07C /* MyComicsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55CED271DBA8500F5A07C /* MyComicsUITestsLaunchTests.swift */; };
-		47F55CFC271DBAB600F5A07C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55CFB271DBAB600F5A07C /* Constants.swift */; };
 		47F55D01271DBB0400F5A07C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55D00271DBB0300F5A07C /* ApiManager.swift */; };
 		47F55D03271DBC2600F5A07C /* ServerBaseArrayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55D02271DBC2600F5A07C /* ServerBaseArrayResponse.swift */; };
 		47F55D08271DBE8500F5A07C /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55D07271DBE8500F5A07C /* Gender.swift */; };
@@ -161,7 +160,6 @@
 		47F55CE7271DBA8500F5A07C /* MyComicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyComicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F55CEB271DBA8500F5A07C /* MyComicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComicsUITests.swift; sourceTree = "<group>"; };
 		47F55CED271DBA8500F5A07C /* MyComicsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComicsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		47F55CFB271DBAB600F5A07C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		47F55D00271DBB0300F5A07C /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		47F55D02271DBC2600F5A07C /* ServerBaseArrayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBaseArrayResponse.swift; sourceTree = "<group>"; };
 		47F55D07271DBE8500F5A07C /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
@@ -365,7 +363,6 @@
 				47904EEB2722F9D60012E8C0 /* DataBase */,
 				47F55CFA271DBAA800F5A07C /* API */,
 				47F55CD4271DBA8500F5A07C /* Assets.xcassets */,
-				47F55CFB271DBAB600F5A07C /* Constants.swift */,
 				47F55CFD271DBAF000F5A07C /* Entities */,
 				47F55D06271DBE7A00F5A07C /* Enumerations */,
 				47F55CD0271DBA8000F5A07C /* MyComicsApp.swift */,
@@ -705,7 +702,6 @@
 				47434BCE27215FC100C57209 /*  CharacterRepository.swift in Sources */,
 				A7FABC962729988D0028012E /* ExistCharacterUseCase.swift in Sources */,
 				47B7BFA1271EFE8900D4491C /* SearchViewModel.swift in Sources */,
-				47F55CFC271DBAB600F5A07C /* Constants.swift in Sources */,
 				A7C0B6792721A01E003836F4 /* TabBar.swift in Sources */,
 				47434BD8272163A900C57209 /* Power.swift in Sources */,
 				47F55D03271DBC2600F5A07C /* ServerBaseArrayResponse.swift in Sources */,

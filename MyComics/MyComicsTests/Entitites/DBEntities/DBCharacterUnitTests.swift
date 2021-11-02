@@ -23,12 +23,21 @@ class DBCharacterUnitTests: XCTestCase {
     }
     
     func testDBCharacterConvertToEntity(){
+        
+        // Give
+        let id: Int = 1
         let dataBaseCharacter = DBCharacter(context: TestCoreDataStack().managedContext)
         
+        dataBaseCharacter.id = Int32(id)
+        dataBaseCharacter.name = "name"
+        dataBaseCharacter.realName = "realName"
+        
+        // When
         let character = dataBaseCharacter.convertToEntity()
        
         XCTAssertNotNil(character)
-
+        XCTAssertEqual(dataBaseCharacter.name, character.name)
+        XCTAssertEqual(dataBaseCharacter.realName, character.realName)
     }
 }
 
