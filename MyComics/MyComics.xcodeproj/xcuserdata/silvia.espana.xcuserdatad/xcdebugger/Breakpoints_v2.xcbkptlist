@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C15CCE2D-E798-4671-B000-9EB39517F486"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C96B05C-6460-40C9-91EF-E671C1AF42AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComics/Scenes/Filters/ByGender/FilterByGender.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "FilterByGender"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "9C96B05C-6460-40C9-91EF-E671C1AF42AF - 12dd42c3ad3907d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComics.FilterByGender.init(selection: Swift.Int) -&gt; MyComics.FilterByGender"
+                  moduleName = "MyComics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComics/Scenes/Filters/ByGender/FilterByGender.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "9C96B05C-6460-40C9-91EF-E671C1AF42AF - 437b94c907464323"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComics.FilterByGender.init() -&gt; MyComics.FilterByGender"
+                  moduleName = "MyComics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComics/Scenes/Filters/ByGender/FilterByGender.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "014CC9E5-D165-4DEE-BD40-2A5BD51EB948"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComics/Scenes/Favorites/FavoriteListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "950E6A80-BEDB-4A58-8671-EB60712BD237"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComics/Scenes/CharacterDetail/CharacterDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "fillFavHeart()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2046B91-989E-471E-BAB5-48DE9DDE24AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComics/Scenes/Search/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "SearchViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE7629D3-E8DF-4B0C-99A8-8A646F6CA6F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComics/Repositories/Character/RemoteCharacterDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "RemoteCharacterDataSource"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "EE7629D3-E8DF-4B0C-99A8-8A646F6CA6F7 - 9ad1e66833dba1ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComics.RemoteCharacterDataSource.deinit"
+                  moduleName = "MyComics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComics/Repositories/Character/RemoteCharacterDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "EE7629D3-E8DF-4B0C-99A8-8A646F6CA6F7 - dcdc0db8a4f97af8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComics.RemoteCharacterDataSource.__deallocating_deinit"
+                  moduleName = "MyComics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComics/Repositories/Character/RemoteCharacterDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68A9DECC-4EE2-42BF-A84D-40C3AF49995E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComicsTests/Repositories/CharacterRepositoryImplementationUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "testSaveCharacterIsCalled()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7017844-42F3-48D4-A5B3-F637155B443A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ServerPowerResponseUnitTests"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - 267a48735c208d77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.__allocating_init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; MyComicsTests.ServerPowerResponseUnitTests"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - c742c267877b5cf1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; MyComicsTests.ServerPowerResponseUnitTests"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - 1c941cb3a7a40d34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.__allocating_init(selector: ObjectiveC.Selector) -&gt; MyComicsTests.ServerPowerResponseUnitTests"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - 9e614f65a690c2d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.init(selector: ObjectiveC.Selector) -&gt; MyComicsTests.ServerPowerResponseUnitTests"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - 2aefbd17d5a5dfcb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.__allocating_init() -&gt; MyComicsTests.ServerPowerResponseUnitTests"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "7">
+               </Location>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - 1f22b30f0fff76e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.init() -&gt; MyComicsTests.ServerPowerResponseUnitTests"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - 64f2a1514fe853e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.__deallocating_deinit"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - c742c267877b5cd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; MyComicsTests.ServerPowerResponseUnitTests"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - 9e614f65a690c2f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.init(selector: ObjectiveC.Selector) -&gt; MyComicsTests.ServerPowerResponseUnitTests"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  uuid = "C7017844-42F3-48D4-A5B3-F637155B443A - 1f22b30f0fff76c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyComicsTests.ServerPowerResponseUnitTests.init() -&gt; MyComicsTests.ServerPowerResponseUnitTests"
+                  moduleName = "MyComicsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComicsTests/Entitites/ServerEntities/ServerPowerResponseUnitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "89">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BBECAD6-FC37-41B2-9D60-0B2F8A970F48"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComicsTests/Entitites/DBEntities/DBCharacterUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "DBCharacterUnitTests"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C0EF0EF-E555-471E-A949-2D0F7515E2D6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComicsTests/Entitites/Entities/CharacterUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "CharacterUnitTests"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D211B61-AF80-4BFD-A75A-ED31C5D7B86E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComicsTests/Entitites/Entities/CharacterUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "CharacterUnitTests"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
