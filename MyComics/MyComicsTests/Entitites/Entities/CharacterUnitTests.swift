@@ -19,30 +19,61 @@ class CharacterUnitTests: XCTestCase {
     
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-   
+        
         try super.tearDownWithError()
     }
     
     func testGetGenderIsCalled() {
-
-        let character = Character(id: 1, name: "name", realName: "realName", aliases: "aliases", image: nil, birth: "birth", deck: "deck", gender: Gender(rawValue: 1)!, origin: "origin", powers: [])
-    
+        
+        // Given
+        let character = Character(id: 1,
+                                  name: "name",
+                                  realName: "realName",
+                                  aliases: "aliases",
+                                  image: nil,
+                                  birth: "birth",
+                                  deck: "deck",
+                                  gender: Gender(rawValue: 1) ?? .other,
+                                  origin: "origin",
+                                  powers: [])
+        
+        //When
         let gender = character.getGender()
         
+        //Then
         XCTAssertNotNil(gender)
         XCTAssertEqual(gender.description, character.gender.description)
-        }
-    
-    func testGetPowerIsCalled() {
-
-        let powerArray = [Power].self()
-        
-        let character = Character(id: 1, name: "name", realName: "realName", aliases: "aliases", image: nil, birth: "birth", deck: "deck", gender: Gender(rawValue: 1)!, origin: "origin", powers: powerArray)
-    
-        let power = character.getPowers()
-        
-        XCTAssertNotNil(power)
-        }
     }
     
+    func testGetPowerIsCalled() {
+        
+        // Given
+        var powerArray: [Power] = []
+        
+        let power1 = Power(id: 1, name: "Fly")
+        let power2 = Power(id: 2, name: "Telekinesis")
+        
+        powerArray.append(power1)
+        powerArray.append(power2)
+        
+        let character = Character(id: 1,
+                                  name: "name",
+                                  realName: "realName",
+                                  aliases: "aliases",
+                                  image: nil,
+                                  birth: "birth",
+                                  deck: "deck",
+                                  gender: Gender(rawValue: 1) ?? .other,
+                                  origin: "origin",
+                                  powers: powerArray)
+        
+        // When
+        let power = character.getPowers()
+        
+        // Then
+        XCTAssertNotNil(power)
+        XCTAssertEqual(power, "Fly, Telekinesis")
+    }
+}
+
 

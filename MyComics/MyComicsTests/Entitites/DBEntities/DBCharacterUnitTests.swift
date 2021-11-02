@@ -36,6 +36,7 @@ class DBCharacterUnitTests: XCTestCase {
         let character = dataBaseCharacter.convertToEntity()
        
         XCTAssertNotNil(character)
+        XCTAssertEqual(dataBaseCharacter.id, Int32(character.id))
         XCTAssertEqual(dataBaseCharacter.name, character.name)
         XCTAssertEqual(dataBaseCharacter.realName, character.realName)
     }
