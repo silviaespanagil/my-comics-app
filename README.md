@@ -59,7 +59,7 @@ This is our main view as the search action is necessary in order to call the API
 
 This is the favorites view. Any character that has been favorited by the user will be shown here
 
-#### ❤️ **Tab Bar** ❤️
+#### 👆 **Tab Bar** 👆
 
 As a navigation treat we implemented a tab bar that makes it easier to the user to move between the search area and the favorite list. 
 
