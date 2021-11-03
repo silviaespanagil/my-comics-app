@@ -88,7 +88,7 @@ I definetly need to keep digging into the testing as I still find it really hard
 
 ## Want to clone this repo? 🐑
 
-If you want to clone this repo please feel free to. There's one file missing called "Constants" if you want the code to compile correctly you will need to create a file with this name and add this struct, take into consideration that you will need to assign the apiKey constant your own API key.
+If you want to clone this repo please feel free to. Notice that there's a file called "Constants" if you want the code to compile correctly you will need to change the constant "apiKey" assign it your own API key 🔑 .
 
 ```
 struct Constants {
