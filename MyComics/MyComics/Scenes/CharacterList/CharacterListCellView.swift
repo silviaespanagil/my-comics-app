@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CharacterListCellView: View {
     
+    @Environment(\.colorScheme) var currentMode
+    
     var image: String?
     var name: String
     var realName: String
@@ -60,7 +62,7 @@ struct CharacterListCellView: View {
             Divider()
             
         }.padding([.leading, .trailing], padding)
-        .background(Color.white)
+            .background(currentMode == .dark ? Color.black : Color.white)
     }
 }
 
