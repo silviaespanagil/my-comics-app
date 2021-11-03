@@ -10,5 +10,5 @@ import Foundation
 struct Constants {
     
     static let baseURL = "https://comicvine.gamespot.com/api/"
-    static let apiKey = "Your apiKey here"
+    static let apiKey = "yourApiKey"
 }
