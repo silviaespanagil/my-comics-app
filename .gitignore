@@ -5,6 +5,17 @@
 ## User settings
 xcuserdata/
 
+### Xcode Patch ###
+*.xcarchive
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+### Projects ###
+*.xcodeproj
+*.xcworkspace
+
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
