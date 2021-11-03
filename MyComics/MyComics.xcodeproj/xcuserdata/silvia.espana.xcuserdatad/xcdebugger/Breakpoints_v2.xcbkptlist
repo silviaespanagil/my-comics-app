@@ -116,14 +116,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "EE7629D3-E8DF-4B0C-99A8-8A646F6CA6F7 - 9ad1e66833dba1ef"
+                  uuid = "EE7629D3-E8DF-4B0C-99A8-8A646F6CA6F7 - a1a795c2a4f2d7db"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MyComics.RemoteCharacterDataSource.deinit"
                   moduleName = "MyComics"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComics/Repositories/Character/RemoteCharacterDataSource.swift"
+                  urlString = "file:///Users/silvia.espana/Desktop/Comics/MyComics/MyComics/Repositories/Character/RemoteCharacterDataSource.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -131,14 +131,14 @@
                   offsetFromSymbolStart = "20">
                </Location>
                <Location
-                  uuid = "EE7629D3-E8DF-4B0C-99A8-8A646F6CA6F7 - dcdc0db8a4f97af8"
+                  uuid = "EE7629D3-E8DF-4B0C-99A8-8A646F6CA6F7 - e7aa7e1233d00ccc"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MyComics.RemoteCharacterDataSource.__deallocating_deinit"
                   moduleName = "MyComics"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/silvia.espana/Desktop/MyComics/MyComics/Repositories/Character/RemoteCharacterDataSource.swift"
+                  urlString = "file:///Users/silvia.espana/Desktop/Comics/MyComics/MyComics/Repositories/Character/RemoteCharacterDataSource.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -362,6 +362,22 @@
             endingLineNumber = "14"
             landmarkName = "CharacterUnitTests"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61595DEB-1C61-438F-BECC-1FB3F84CBBA6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyComics/Scenes/TabBar/TabBar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "tabBarApperance()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

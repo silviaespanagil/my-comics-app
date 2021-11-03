@@ -10,6 +10,7 @@ import SwiftUI
 struct TabBar: View {
     
     @State var activeTab: Tab = Tab.search
+    @Environment(\.colorScheme) var currentMode
     
     init() {
         
@@ -36,6 +37,7 @@ struct TabBar: View {
         }
         .navigationTitle(getNavBarTitle(for: activeTab))
         .navigationBarTitleDisplayMode(.large)
+
     }
     
     func getNavBarTitle(for tabItemType: Tab) -> String {
@@ -51,10 +53,23 @@ struct TabBar: View {
 
 extension TabBar {
     
-    func tabBarApperance() {
-        
-        UITabBar.appearance().backgroundColor = UIColor.white
+        func tabBarApperance() {
+        e
+        UITabBar.appearance().barTintColor = (backgroundColor() as? UIColor)
+            UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+    }
+}
+
+func backgroundColor() -> Any {
+    
+    @Environment(\.colorScheme) var currentMode
+    
+    if currentMode == .dark {
+        return UIColor.black
+    }
+    else {
+        return UIColor.white
     }
 }
 
