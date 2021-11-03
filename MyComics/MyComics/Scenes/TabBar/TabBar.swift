@@ -54,7 +54,7 @@ struct TabBar: View {
 extension TabBar {
     
         func tabBarApperance() {
-        e
+        
         UITabBar.appearance().barTintColor = (backgroundColor() as? UIColor)
             UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
