@@ -23,6 +23,7 @@ https://user-images.githubusercontent.com/81619759/139843522-d2dd2d6b-8de1-4760-
 
 - Allow users to erase the search input
 - Add a tab bar
+- Support dark mode 🌙 
 
 ## Built with 🔨
 - XCode
@@ -81,6 +82,12 @@ https://user-images.githubusercontent.com/81619759/139852536-3c4d91ad-a50d-4abd-
 
 Prior to this project my experience in doing unitary test has been almost unexistant so this was a rollercoaster 🎢 but I had a lot of fun. For the testing my mentor did 4 components to help me understand a little bit more about unit testing, but also for me to have some guidance on how and what to test. After it I was able to do more than 20 test! I'm still in awe about this.
 
+🌙 **Dark mode** 🌙
+
+As we know, users can activate in their devices dark mode, however the app has certain views that do not cope well with it. So, as a way to support the Dark Mode
+we used the colorScheme environment key that allow us to detect which mode is enable and to render the views acording it. This was really easy to do but yet I found it very satisfactory as the result is truly great
+
+https://user-images.githubusercontent.com/81619759/140087855-18f5ebbd-2887-4c0f-af37-6430406f9fac.mov
 
 ### My challenges 🚩
 
