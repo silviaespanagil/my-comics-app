@@ -35,4 +35,9 @@ class LocalCharacterDataSource {
         
         dbManager.getCharacters()
     }
+    
+    func getCharacter(id: Int) -> Character? {
+        
+        dbManager.getCharacter(id: id)
+    }
 }

@@ -22,16 +22,25 @@ class CharacterRepositoryImplementation: CharacterRepository {
     
     func getCharacter(id: Int) -> AnyPublisher<Character, Error> {
         
-        return remoteDataSource.getCharacter(id: id).map { serverCharacter -> Character in
-
-            // convert to entity
-            let character = serverCharacter.results.converToEntity()
+        if let character = localDataSource.getCharacter(id: id) {
             
-            // Return
-            return character
+            return Just(character)
+                .setFailureType(to: Error.self)
+                .eraseToAnyPublisher()
+            
+        } else {
+        
+            return remoteDataSource.getCharacter(id: id).map { serverCharacter -> Character in
+                
+                // convert to entity
+                let character = serverCharacter.results.converToEntity()
+                
+                // Return
+                return character
+            }
+            .mapError({ $0 })
+            .eraseToAnyPublisher()
         }
-        .mapError({ $0 })
-        .eraseToAnyPublisher()
     }
     
     func saveCharacter(character: Character) {

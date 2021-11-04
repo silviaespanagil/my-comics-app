@@ -143,4 +143,34 @@ class DBManagerUnitTests: XCTestCase {
         // Then
         XCTAssertFalse(response)
     }
+    
+    func testGetCharacterId() {
+        
+        // Given
+        let character = Character(id: 1,
+                                  name: "name",
+                                  realName: "real_name",
+                                  aliases: "aliases",
+                                  image: nil,
+                                  birth: "birth",
+                                  deck: "deck",
+                                  gender: .other,
+                                  origin: "origin",
+                                  powers: [])
+        
+        // When
+        sut.saveCharacter(character: character)
+        let response = sut.getCharacter(id: 1)
+        
+        // Then
+        XCTAssertNotNil(response)
+        XCTAssertEqual(response?.id, character.id)
+        XCTAssertEqual(response?.name, character.name)
+        XCTAssertEqual(response?.realName, character.realName)
+        XCTAssertEqual(response?.aliases, character.aliases)
+        XCTAssertEqual(response?.birth, character.birth)
+        XCTAssertEqual(response?.deck, character.deck)
+        XCTAssertEqual(response?.gender, character.gender)
+        XCTAssertEqual(response?.origin, character.origin)
+    }
 }
