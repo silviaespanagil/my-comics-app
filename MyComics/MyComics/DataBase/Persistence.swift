@@ -28,4 +28,9 @@ protocol Persistence {
         Get all characters from DB
      */
     func getCharacters() -> [Character]
+    
+    /**
+        Get Character by specified id if found
+     */
+    func getCharacter(id: Int) -> Character?
 }

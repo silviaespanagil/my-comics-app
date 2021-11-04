@@ -119,4 +119,32 @@ class DBManager: Persistence {
         
         return characters
     }
+    
+    func getCharacter(id: Int) -> Character? {
+        
+        let characterId = Int32(id)
+        
+        let fetchRequest = NSFetchRequest<DBCharacter>(entityName: "DBCharacter")
+        fetchRequest.predicate = NSPredicate(format: "id==\(characterId)")
+        
+        do {
+            
+            let dbCharacters = try coreDataStack.managedContext.fetch(fetchRequest)
+            
+            if let dbCharacter = dbCharacters.first {
+                
+                return dbCharacter.convertToEntity()
+                
+            } else {
+                
+                return nil
+            }
+            
+        } catch let error as NSError {
+            
+            print("Could not fetch character id. \(error), \(error.userInfo)")
+            
+            return nil
+        }
+    }
 }
