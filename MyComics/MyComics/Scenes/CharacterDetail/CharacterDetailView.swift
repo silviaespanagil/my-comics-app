@@ -22,6 +22,52 @@ struct CharacterDetailView: View {
     
     var body: some View {
         
+        VStack {
+            
+            content
+            
+        }
+        .onAppear {
+
+            // get character detail
+            viewModel.getCharacterDetail()
+            
+            viewModel.checkIfFavorited()
+        }
+    }
+    
+    @ViewBuilder
+    private var content: some View {
+        
+        switch viewModel.state {
+        case .idle:
+            idleView()
+        case .loading:
+            loadingView()
+        case .failed:
+            failureView()
+        case .success:
+            successView()
+        }
+    }
+    
+    private func idleView() -> some View {
+        
+        EmptyView()
+    }
+    
+    private func loadingView() -> some View {
+        
+        ProgressView(viewModel.progressViewLabel)
+    }
+    
+    private func failureView() -> some View {
+        
+        EmptyView()
+    }
+    
+    private func successView() -> some View {
+        
         VStack(alignment: .center) {
             
             HStack(alignment: .center,spacing: spacing) {
@@ -74,11 +120,6 @@ struct CharacterDetailView: View {
             
             Divider()
             
-            if viewModel.showProgressView {
-                
-                ProgressView(viewModel.progressViewLabel)
-            }
-            
             ScrollView {
              
                 // Birth
@@ -108,11 +149,21 @@ struct CharacterDetailView: View {
                     Spacer().frame(height: spacerHeight)
                 }
                 
+                // Alias
+                
+                if !viewModel.character.aliases.isEmpty {
+                    
+                    InfoValueView(info: viewModel.characterViewValue[3],
+                                  value: viewModel.character.aliases)
+                    
+                    Spacer().frame(height: spacerHeight)
+                }
+                
                 // Powers
                 
                 if !viewModel.character.getPowers().isEmpty {
                     
-                    InfoValueView(info: viewModel.characterViewValue[3],
+                    InfoValueView(info: viewModel.characterViewValue[4],
                                   value: viewModel.character.getPowers())
                     
                     Spacer().frame(height: spacerHeight)
@@ -122,20 +173,13 @@ struct CharacterDetailView: View {
                 
                 if !viewModel.character.deck.isEmpty {
                     
-                    InfoValueView(info: viewModel.characterViewValue[4],
+                    InfoValueView(info: viewModel.characterViewValue[5],
                                   value: viewModel.character.deck)
                 }
             }
             .padding([.leading, .trailing], padding8)
         }
         .padding([.leading, .trailing], padding16)
-        .onAppear {
-
-            // get character detail
-            viewModel.getCharacterDetail()
-            
-            viewModel.checkIfFavorited()
-        }
     }
 }
 
