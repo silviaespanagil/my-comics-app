@@ -29,10 +29,15 @@ struct ServerCharacterResponse: Codable {
             pows = serverPowers.map({ $0.convertToEntity()})
         }
         
+        var formattedAliases = ""
+        if let aliases = aliases {
+            formattedAliases = aliases.replacingOccurrences(of: "\n", with: ", ")
+        }
+        
         return Character(id: id,
                          name: name ?? "",
                          realName: realName ?? "",
-                         aliases: aliases ?? "",
+                         aliases: formattedAliases,
                          image: image,
                          birth: birth ?? "",
                          deck: deck ?? "",

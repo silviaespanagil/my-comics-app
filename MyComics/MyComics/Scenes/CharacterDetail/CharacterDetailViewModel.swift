@@ -11,9 +11,16 @@ import CoreData
 
 class CharacterDetailViewModel: ObservableObject {
     
+    enum State: Equatable {
+        case idle
+        case loading
+        case failed
+        case success
+    }
+    
     // Variables
     
-    var characterViewValue: [String] = ["Birth:", "Gender:", "Origin:", "Power:", "Description:"]
+    var characterViewValue: [String] = ["Birth:", "Gender:", "Origin:", "Alias:", "Power:", "Description:"]
     
     let progressViewLabel: String = "Downloading"
     
@@ -24,9 +31,9 @@ class CharacterDetailViewModel: ObservableObject {
     
     @Published public private(set) var character: Character
     
-    @Published public private(set) var showProgressView = false
-    
     @Published public var isFavorite : Bool = false
+    
+    @Published private(set) var state: State = State.idle
     
     // Cancellables
     
@@ -37,34 +44,21 @@ class CharacterDetailViewModel: ObservableObject {
     init(character: Character) {
         
         self.character = character
-        
-        let didSaveNotification = NSManagedObjectContext.didSaveObjectsNotification
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(didSave(_:)),
-                                               name: didSaveNotification,
-                                               object: nil)
-    }
-    
-    @objc func didSave(_ notification: Notification) {
-        
-        checkIfFavorited()
     }
     
     func getCharacterDetail() {
         
-        showProgressView = true
+        state = .loading
         
         cancellable = GetCharacterDetailUseCase().execute(id: character.id)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 
-                self.showProgressView = false
-                
                 switch completion {
                 case .finished:
-                    break
+                    self.state = .success
                 case .failure:
-                    break
+                    self.state = .failed
                 }
                 
             }, receiveValue: { (character: Character) in
@@ -88,5 +82,7 @@ class CharacterDetailViewModel: ObservableObject {
             
             SaveCharacterUseCase().execute(character: character)
         }
+        
+        checkIfFavorited()
     }
 }
