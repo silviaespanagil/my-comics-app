@@ -7,18 +7,15 @@
 
 import Foundation
 import Combine
+import Resolver
 
 class ApiManager {
+    private var session: URLSession
     
-    var baseURL: URL
-    var session: URLSession
-    
-    init(baseURL: String, session: URLSession = URLSession.shared) {
-        
-        self.baseURL = URL(string: baseURL)!
-        self.session = session
-    }
-    
+    init(session: URLSession? = nil) {
+            self.session = session ?? Resolver.resolve()
+      }
+
     func performRequest<T: Decodable>(urlRequest: URLRequest) -> AnyPublisher<T, Error> {
         
         return session.dataTaskPublisher(for: urlRequest)

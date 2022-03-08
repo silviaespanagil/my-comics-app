@@ -7,23 +7,20 @@
 
 import Foundation
 import Combine
+import Resolver
 
 class RemoteCharacterDataSource {
     
+    var apiManager: ApiManager
+    private let baseURL: URL
     static let getCharacterURL: String = "character/"
     
-    private let baseURLString: String
-    private let session: URLSession
-    
-    init(baseURL: String = Constants.baseURL, session: URLSession = URLSession.shared) {
-        
-        self.baseURLString = baseURL
-        self.session = session
-    }
-    
+    init(apiManager: ApiManager? = nil, baseURL: URL? = nil) {
+        self.apiManager = apiManager ?? Resolver.resolve()
+        self.baseURL = baseURL ?? Resolver.resolve()
+      }
+   
     func getCharacter(id: Int) -> AnyPublisher<ServerBaseResponse<ServerCharacterResponse>, Error> {
-        
-        let apiManager = ApiManager(baseURL: baseURLString, session: session)
         
         let urlRequest = getCharacterEndpoint(id: id)
         
@@ -37,7 +34,7 @@ extension RemoteCharacterDataSource {
     
     func getCharacterEndpoint(id: Int) -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(RemoteCharacterDataSource.getCharacterURL)4005-\(id)"
+        let endpoint = "\(baseURL)\(RemoteCharacterDataSource.getCharacterURL)4005-\(id)"
         
         var components = URLComponents(string: endpoint)
         

@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import Resolver
 
 class SearchViewModel: ObservableObject {
 
@@ -28,6 +29,8 @@ class SearchViewModel: ObservableObject {
     
     @Published public private(set) var searchDone = false
     
+    private var searchCharacterUseCase: SearchCharacterUseCase = Resolver.resolve()
+    
     // Cancellables
     
     private var cancellable: AnyCancellable?
@@ -46,7 +49,7 @@ class SearchViewModel: ObservableObject {
         
         showProgressView = true
         
-        cancellable = SearchCharacterUseCase().execute(searchTerm: searchInput)
+        cancellable = searchCharacterUseCase.execute(searchTerm: searchInput)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 

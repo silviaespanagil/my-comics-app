@@ -4,7 +4,7 @@
 //
 //  Created by Xavi on 28/10/21.
 //
-
+import Resolver
 import XCTest
 @testable import MyComics
 
@@ -16,7 +16,8 @@ class RemoteCharacterDataSourceUnitTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         try super.setUpWithError()
         
-        sut = RemoteCharacterDataSource(baseURL: "http://jsonplaceholder.typicode.com/")
+        Resolver.registerMockServices()
+        sut = RemoteCharacterDataSource()
     }
 
     override func tearDownWithError() throws {

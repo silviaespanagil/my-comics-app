@@ -21,7 +21,7 @@ struct TabBar: View {
         
         TabView(selection: $activeTab) {
             
-            SearchView(viewModel: SearchViewModel())
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")

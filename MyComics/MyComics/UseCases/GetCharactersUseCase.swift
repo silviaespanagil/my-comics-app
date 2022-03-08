@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import Resolver
 
 class GetCharactersUseCase {
     
     private let repository: CharacterRepository
     
-    init(repository: CharacterRepository = CharacterRepositoryImplementation()) {
-        
-        self.repository = repository
-    }
+    init(repository: CharacterRepository? = nil) {
+           
+           self.repository = repository ?? Resolver.resolve()
+       }
     
     func execute() -> [Character] {
         

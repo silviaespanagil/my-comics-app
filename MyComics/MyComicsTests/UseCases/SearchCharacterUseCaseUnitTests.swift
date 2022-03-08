@@ -4,13 +4,29 @@
 //
 //  Created by Xavi on 18/10/21.
 //
-
+import Resolver
 import XCTest
 @testable import MyComics
 
 class SearchUseCaseUnitTests: XCTestCase {
 
+    // MARK: - Properties
+    @LazyInjected var mockSearchRepository: MockSearchRepository
     var sut: SearchCharacterUseCase?
+    
+    // MARK: - Life Cycle
+      override func setUp() {
+          super.setUp()
+
+          sut = SearchCharacterUseCase()
+          Resolver.registerMockServices()
+      }
+
+      override func tearDown() {
+          sut = nil
+
+          super.tearDown()
+      }
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,13 +43,12 @@ class SearchUseCaseUnitTests: XCTestCase {
     func testSearchCalled() {
         
         // Given
-        let repository = MockSearchRepository()
-        sut = SearchCharacterUseCase(repository: repository)
+        sut = SearchCharacterUseCase()
         
         // When
         _ = sut!.execute(searchTerm: "batman")
         
         // Then
-        XCTAssertTrue(repository.isSearchCalled)
+        XCTAssertTrue(mockSearchRepository.isSearchCalled)
     }
 }

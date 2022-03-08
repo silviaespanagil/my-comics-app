@@ -7,23 +7,21 @@
 
 import Foundation
 import Combine
+import Resolver
 
 class RemoteSearchDataSource {
     
     static let searchURL: String = "search/"
     
-    private let baseURLString: String
-    private let session: URLSession
+    private let apiManager: ApiManager
+    private let baseURL: URL
     
-    init(baseURL: String = Constants.baseURL, session: URLSession = URLSession.shared) {
-        
-        self.baseURLString = baseURL
-        self.session = session
-    }
+    init(apiManager: ApiManager? = nil, baseURL: URL? = nil) {
+        self.apiManager = apiManager ?? Resolver.resolve()
+        self.baseURL = baseURL ?? Resolver.resolve()
+      }
     
     func searchCharacter(searchTerm: String) -> AnyPublisher<ServerBaseArrayResponse<ServerCharacterResponse>, Error> {
-        
-        let apiManager = ApiManager(baseURL: baseURLString, session: session)
         
         let urlRequest = getSearchCharacterEndpoint(searchTerm: searchTerm)
         
@@ -37,7 +35,7 @@ extension RemoteSearchDataSource {
     
     func getSearchCharacterEndpoint(searchTerm: String) -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(RemoteSearchDataSource.searchURL)"
+        let endpoint = "\(baseURL)\(RemoteSearchDataSource.searchURL)"
         
         var components = URLComponents(string: endpoint)
         

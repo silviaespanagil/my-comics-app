@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct SearchView: View {
     
-    @StateObject var viewModel: SearchViewModel
+    @ObservedObject var viewModel: SearchViewModel = Resolver.resolve()
     
     @State var searchText: String = ""
     
@@ -103,6 +104,6 @@ struct SearchView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        SearchView(viewModel: SearchViewModel())
+        SearchView()
     }
 }

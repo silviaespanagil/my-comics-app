@@ -4,7 +4,7 @@
 //
 //  Created by Xavi on 18/10/21.
 //
-
+import Resolver
 import XCTest
 import Combine
 @testable import MyComics
@@ -33,16 +33,13 @@ class SearchRepositoryImplementationUnitTests: XCTestCase {
     }
 
     // MARK: - Search
-
     func testGetSearchOK() {
         
+        Resolver.registerMockSearchCharacterServices()
         // Given
         let search = "batman"
-        let session = getSearchSession(statusCode: successStatusCode)
         
-        let remote = RemoteSearchDataSource(baseURL: baseUrlString, session: session)
-        
-        sut = SearchRepositoryImplementation(remoteDataSource: remote)
+        sut = SearchRepositoryImplementation()
         
         let exp = expectation(description: "expected values")
         
@@ -78,7 +75,7 @@ class SearchRepositoryImplementationUnitTests: XCTestCase {
         let search = "batman"
         let session = getSearchSession(statusCode: failureStatusCode)
         
-        let remote = RemoteSearchDataSource(baseURL: baseUrlString, session: session)
+        let remote = RemoteSearchDataSource(apiManager: ApiManager(session: session), baseURL: URL(string: baseUrlString))
         
         sut = SearchRepositoryImplementation(remoteDataSource: remote)
         
@@ -112,7 +109,7 @@ extension SearchRepositoryImplementationUnitTests {
     func getSearchSession(statusCode: Int) -> URLSession {
         
         // URL we expect to call
-        let url = URL(string: "http://jsonplaceholder.typicode.com/search/?api_key=c470a425f528652de6ee58539d00793cb1bd5f7f&query=batman&format=json&field_list=id,image,name,aliases,real_name,gender&resources=character&limit=100")
+        let url = URL(string: "http://jsonplaceholder.typicode.com/search/?api_key=\(Constants.apiKey)&query=batman&format=json&field_list=id,image,name,aliases,real_name,gender&resources=character&limit=100")
         
         // data we expect to receive
         let data = getSearchData()

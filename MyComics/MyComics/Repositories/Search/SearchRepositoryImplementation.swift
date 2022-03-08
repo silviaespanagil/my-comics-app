@@ -7,14 +7,14 @@
 
 import Foundation
 import Combine
+import Resolver
 
 class SearchRepositoryImplementation: SearchRepository {
     
     private let remoteDataSource: RemoteSearchDataSource
     
-    init(remoteDataSource: RemoteSearchDataSource = RemoteSearchDataSource()) {
-        
-        self.remoteDataSource = remoteDataSource
+    init(remoteDataSource: RemoteSearchDataSource? = nil) {
+        self.remoteDataSource = remoteDataSource ?? Resolver.resolve()
     }
     
     func searchCharacter(searchTerm: String) -> AnyPublisher<[Character], Error> {

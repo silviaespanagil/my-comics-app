@@ -60,7 +60,6 @@
 		47EB6190271EB0F00087FF85 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB618F271EB0F00087FF85 /* Character.swift */; };
 		47EB6192271EC28C0087FF85 /* ServerImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB6191271EC28C0087FF85 /* ServerImageResponse.swift */; };
 		47EB6194271EC2C30087FF85 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB6193271EC2C30087FF85 /* ImageModel.swift */; };
-		47F55CD1271DBA8000F5A07C /* MyComicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55CD0271DBA8000F5A07C /* MyComicsApp.swift */; };
 		47F55CD5271DBA8500F5A07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F55CD4271DBA8500F5A07C /* Assets.xcassets */; };
 		47F55CD8271DBA8500F5A07C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F55CD7271DBA8500F5A07C /* Preview Assets.xcassets */; };
 		47F55CEC271DBA8500F5A07C /* MyComicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55CEB271DBA8500F5A07C /* MyComicsUITests.swift */; };
@@ -80,6 +79,11 @@
 		A7C0B6792721A01E003836F4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B6782721A01E003836F4 /* TabBar.swift */; };
 		A7C0B67C2721A24D003836F4 /* FavoriteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C0B67B2721A24D003836F4 /* FavoriteListView.swift */; };
 		A7FABC962729988D0028012E /* ExistCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FABC952729988D0028012E /* ExistCharacterUseCase.swift */; };
+		B278D55E27AC28E700F64324 /* App+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D55D27AC28E700F64324 /* App+Injection.swift */; };
+		B2B2281227A1AEFA0046A3AD /* MyComicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F55CD0271DBA8000F5A07C /* MyComicsApp.swift */; };
+		B2B5D64427AD469500A3D39B /* Resolver+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B5D64327AD469500A3D39B /* Resolver+XCTest.swift */; };
+		B2F81F9E27D77A1F00A73407 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = B2F81F9D27D77A1F00A73407 /* Resolver */; };
+		B2F81F9F27D77D1000A73407 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70F1C9327319DC60079DECC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +102,19 @@
 			remoteInfo = MyComics;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2B2280A27A1A9050046A3AD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		47434BCD27215FC100C57209 /*  CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CharacterRepository.swift"; sourceTree = "<group>"; };
@@ -176,6 +193,8 @@
 		A7C0B6782721A01E003836F4 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A7C0B67B2721A24D003836F4 /* FavoriteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListView.swift; sourceTree = "<group>"; };
 		A7FABC952729988D0028012E /* ExistCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistCharacterUseCase.swift; sourceTree = "<group>"; };
+		B278D55D27AC28E700F64324 /* App+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Injection.swift"; sourceTree = "<group>"; };
+		B2B5D64327AD469500A3D39B /* Resolver+XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+XCTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F81F9E27D77A1F00A73407 /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +382,7 @@
 		47F55CCF271DBA8000F5A07C /* MyComics */ = {
 			isa = PBXGroup;
 			children = (
+				B278D55C27AC28BF00F64324 /* Injection */,
 				47904EEB2722F9D60012E8C0 /* DataBase */,
 				47F55CFA271DBAA800F5A07C /* API */,
 				47F55CD4271DBA8500F5A07C /* Assets.xcassets */,
@@ -389,6 +410,7 @@
 		47F55CE0271DBA8500F5A07C /* MyComicsTests */ = {
 			isa = PBXGroup;
 			children = (
+				B2B5D64227AD467900A3D39B /* Resolver */,
 				4760BEEC272ADA08001F8A5D /* DataBase */,
 				47F55D1D271DC68400F5A07C /* Entitites */,
 				47F55D1B271DC68400F5A07C /* Repositories */,
@@ -533,6 +555,22 @@
 			path = Favorites;
 			sourceTree = "<group>";
 		};
+		B278D55C27AC28BF00F64324 /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				B278D55D27AC28E700F64324 /* App+Injection.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		B2B5D64227AD467900A3D39B /* Resolver */ = {
+			isa = PBXGroup;
+			children = (
+				B2B5D64327AD469500A3D39B /* Resolver+XCTest.swift */,
+			);
+			path = Resolver;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -543,12 +581,16 @@
 				47F55CC9271DBA8000F5A07C /* Sources */,
 				47F55CCA271DBA8000F5A07C /* Frameworks */,
 				47F55CCB271DBA8000F5A07C /* Resources */,
+				B2B2280A27A1A9050046A3AD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MyComics;
+			packageProductDependencies = (
+				B2F81F9D27D77A1F00A73407 /* Resolver */,
+			);
 			productName = MyComics;
 			productReference = 47F55CCD271DBA8000F5A07C /* MyComics.app */;
 			productType = "com.apple.product-type.application";
@@ -621,6 +663,9 @@
 				Base,
 			);
 			mainGroup = 47F55CC4271DBA8000F5A07C;
+			packageReferences = (
+				B2F81F9C27D77A1F00A73407 /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = 47F55CCE271DBA8000F5A07C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -685,7 +730,6 @@
 				47F55D16271DC52400F5A07C /* SearchCharacterUseCase.swift in Sources */,
 				47B7BFAA271F053000D4491C /* ImageLoader.swift in Sources */,
 				47F55D14271DC28E00F5A07C /* RemoteSearchDataSource.swift in Sources */,
-				47F55CD1271DBA8000F5A07C /* MyComicsApp.swift in Sources */,
 				47904EF8272308F50012E8C0 /* LocalCharacterDataSource.swift in Sources */,
 				A70F1C9427319DC60079DECC /* Constants.swift in Sources */,
 				47434BDC272165E200C57209 /* ServerBaseResponse.swift in Sources */,
@@ -695,6 +739,8 @@
 				47F55D12271DC25800F5A07C /* SearchRepositoryImplementation.swift in Sources */,
 				47B7BFA6271F01C100D4491C /* CharacterListCellView.swift in Sources */,
 				47B7BF9F271EFCF500D4491C /* SearchView.swift in Sources */,
+				B278D55E27AC28E700F64324 /* App+Injection.swift in Sources */,
+				B2B2281227A1AEFA0046A3AD /* MyComicsApp.swift in Sources */,
 				47434BE027216CC700C57209 /* TitleValueView.swift in Sources */,
 				47B7BFB5271F146500D4491C /* CharacterDetailViewModel.swift in Sources */,
 				47F55D10271DC21C00F5A07C /* SearchRepository.swift in Sources */,
@@ -730,6 +776,7 @@
 				47F55D21271DC82000F5A07C /* RemoteSearchDataSourceUnitTests.swift in Sources */,
 				4760BF0D272AE86C001F8A5D /* CharacterRepositoryImplementationUnitTests.swift in Sources */,
 				47F55D1F271DC6AD00F5A07C /* SearchCharacterUseCaseUnitTests.swift in Sources */,
+				B2B5D64427AD469500A3D39B /* Resolver+XCTest.swift in Sources */,
 				4760BF01272AE7BA001F8A5D /* DBImageUnitTests.swift in Sources */,
 				4760BF0B272AE853001F8A5D /* RemoteCharacterDataSourceUnitTests.swift in Sources */,
 				4760BEF6272AE585001F8A5D /* MockSearchRepository.swift in Sources */,
@@ -739,6 +786,7 @@
 				4760BEF2272AE560001F8A5D /* TestCoreDataStack.swift in Sources */,
 				4760BF11272AE89E001F8A5D /* GetCharactersUseCaseUnitTests.swift in Sources */,
 				4760BEFD272AE791001F8A5D /* ServerCharacterResponseUnitTests.swift in Sources */,
+				B2F81F9F27D77D1000A73407 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +934,7 @@
 		47F55CF2271DBA8500F5A07C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -915,6 +964,7 @@
 		47F55CF3271DBA8500F5A07C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1073,6 +1123,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2F81F9C27D77A1F00A73407 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2F81F9D27D77A1F00A73407 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2F81F9C27D77A1F00A73407 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		47904EEC2722F9E80012E8C0 /* Model.xcdatamodeld */ = {

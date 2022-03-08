@@ -4,12 +4,13 @@
 //
 //  Created by Xavi on 28/10/21.
 //
-
+import Resolver
 import XCTest
 @testable import MyComics
 
 class GetCharactersUseCaseUnitTests: XCTestCase {
 
+    @LazyInjected var repository: MockCharacterRepository
     var sut: GetCharactersUseCase?
 
     override func setUpWithError() throws {
@@ -27,8 +28,7 @@ class GetCharactersUseCaseUnitTests: XCTestCase {
     func testGetCharactersIsCalled(){
         
         //GIVEN
-        let repository = MockCharacterRepository()
-        sut = GetCharactersUseCase(repository: repository)
+        sut = GetCharactersUseCase()
         
         //WHEN
         _ = sut!.execute()

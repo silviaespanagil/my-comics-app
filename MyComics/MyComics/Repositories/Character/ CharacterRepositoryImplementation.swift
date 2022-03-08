@@ -7,17 +7,17 @@
 
 import Foundation
 import Combine
+import Resolver
 
 class CharacterRepositoryImplementation: CharacterRepository {
 
     private let remoteDataSource: RemoteCharacterDataSource
     private let localDataSource: LocalCharacterDataSource
     
-    init(remoteDataSource: RemoteCharacterDataSource = RemoteCharacterDataSource(),
-         localDataSource: LocalCharacterDataSource = LocalCharacterDataSource()) {
-        
-        self.remoteDataSource = remoteDataSource
-        self.localDataSource = localDataSource
+    init(localDataSource: LocalCharacterDataSource? = nil,
+         remoteDataSource: RemoteCharacterDataSource? = nil) {
+        self.localDataSource = localDataSource ?? LocalCharacterDataSource()
+        self.remoteDataSource = remoteDataSource ?? Resolver.resolve()
     }
     
     func getCharacter(id: Int) -> AnyPublisher<Character, Error> {

@@ -7,15 +7,15 @@
 
 import Foundation
 import Combine
+import Resolver
 
 class SearchCharacterUseCase {
     
     private let repository: SearchRepository
     
-    init(repository: SearchRepository = SearchRepositoryImplementation()) {
-        
-        self.repository = repository
-    }
+    init(repository: SearchRepository? = nil) {
+           self.repository = repository ?? Resolver.resolve()
+       }
     
     func execute(searchTerm: String) -> AnyPublisher<[Character], Error> {
         

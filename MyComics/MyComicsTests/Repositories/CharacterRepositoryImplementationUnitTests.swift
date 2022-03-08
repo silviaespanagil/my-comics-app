@@ -4,51 +4,40 @@
 //
 //  Created by Xavi on 28/10/21.
 //
-
+import Resolver
 import XCTest
 import Combine
 @testable import MyComics
 
 class CharacterRepositoryImplementationUnitTests: XCTestCase {
     
+    @LazyInjected var remoteCharacterDataSource: RemoteCharacterDataSource
+    
     var sut: CharacterRepositoryImplementation!
     var local: LocalCharacterDataSource!
     
     var cancellable: AnyCancellable?
     
-    let baseUrlString = "http://jsonplaceholder.typicode.com/"
+    let timeoutTime: TimeInterval = 10
     
-    let successStatusCode = 200
-    let failureStatusCode = 401
-    let timeoutTime: TimeInterval = 2
-    
-    override func setUpWithError() throws {
+    override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        try super.setUpWithError()
-        
+        super.setUp()
         local = LocalCharacterDataSource(dbManager: DBManager(coreDataStack: TestCoreDataStack()))
-        
-        sut = CharacterRepositoryImplementation(localDataSource: local)
+        Resolver.registerMockCharacterServices()
     }
     
-    override func tearDownWithError() throws {
+    override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         sut = nil
         local = nil
-        
-        try super.tearDownWithError()
+        super.tearDown()
     }
     
     func testGetCharacterOK() {
-
-        // Given
+        
         let id = 1
-        let session = getCharacterSession(statusCode: successStatusCode, id: id)
-        
-        let remote = RemoteCharacterDataSource(baseURL: baseUrlString, session: session)
-        
-        sut = CharacterRepositoryImplementation(remoteDataSource: remote)
-        
+        sut = CharacterRepositoryImplementation()
         let exp = expectation(description: "expected values")
         
         // When
@@ -80,14 +69,11 @@ class CharacterRepositoryImplementationUnitTests: XCTestCase {
     }
     
     func testGetCharacterError() {
-
-        // Given
+        Resolver.registerMockCharacterErrorServices()
+        
         let id = 1
-        let session = getCharacterSession(statusCode: failureStatusCode, id: id)
         
-        let remote = RemoteCharacterDataSource(baseURL: baseUrlString, session: session)
-        
-        sut = CharacterRepositoryImplementation(remoteDataSource: remote)
+        sut = CharacterRepositoryImplementation()
         
         let exp = expectation(description: "expected values")
         
@@ -116,6 +102,7 @@ class CharacterRepositoryImplementationUnitTests: XCTestCase {
     func testSaveCharacter() {
         
         // Given
+        sut = CharacterRepositoryImplementation(localDataSource: local)
         let character = Character(id: 1,
                                   name: "",
                                   realName: "",
@@ -136,8 +123,9 @@ class CharacterRepositoryImplementationUnitTests: XCTestCase {
     }
     
     func testRemoveCharacter() {
-        
+        Resolver.registerMockCharacterServices()
         // Given
+        sut = CharacterRepositoryImplementation(localDataSource: local)
         let character = Character(id: 1,
                                   name: "",
                                   realName: "",
@@ -158,61 +146,5 @@ class CharacterRepositoryImplementationUnitTests: XCTestCase {
         // Then
         XCTAssertEqual(charactersSaved.count, 1)
         XCTAssertEqual(charactersRemoved.count, 0)
-    }
-}
-
-extension CharacterRepositoryImplementationUnitTests {
-    
-    func getCharacterSession(statusCode: Int, id: Int) -> URLSession {
-        
-        // URL we expect to call
-        let url = URL(string: "http://jsonplaceholder.typicode.com/character/4005-\(id)?api_key=c470a425f528652de6ee58539d00793cb1bd5f7f&format=json&field_list=id,image,name,aliases,real_name,birth,deck,gender,origin,powers")
-        
-        // data we expect to receive
-        let data = getCharacterData()
-        
-        // attach that to some fixed data in our protocol handler
-        URLProtocolMock.testURLs = [url: data]
-        URLProtocolMock.response = HTTPURLResponse(url: URL(string: "http://jsonplaceholder.typicode.com:8080")!,
-                                                   statusCode: statusCode,
-                                                   httpVersion: nil,
-                                                   headerFields: nil)
-        
-        // now setup a configuration to use our mock
-        let config = URLSessionConfiguration.ephemeral
-        config.protocolClasses = [URLProtocolMock.self]
-        
-        // and ceate the URLSession form that
-        let session = URLSession(configuration: config)
-        
-        return session
-    }
-    
-    func getCharacterData() -> Data {
-        
-        let dataString = """
-                                {
-                                "results": {
-                                    "id": 1 ,
-                                    "name": "Batman",
-                                    "real_name": "Bruce Wayne",
-                                    "aliases": "Black Knight",
-                                    "birth": "birth",
-                                    "deck": "deck",
-                                    "image": {},
-                                    "gender": 1,
-                                    "origin": {
-                                        "id": 4,
-                                        "name": "Human"
-                                    },
-                                    "powers": [{
-                                        "id": 3,
-                                        "name": "Agility"
-                                    }]
-                                }
-                                }
-                    """
-
-        return Data(dataString.utf8)
     }
 }
