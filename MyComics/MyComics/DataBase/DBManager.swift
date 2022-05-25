@@ -30,14 +30,6 @@ class DBManager: Persistence {
         dbImage.superUrl = character.image?.superUrl
         dbImage.thumbUrl = character.image?.thumbUrl
         
-        var dbPowers: [DBPower] = []
-        for power in character.powers {
-            let dbPower = DBPower(context: coreDataStack.managedContext)
-            dbPower.id = Int32(power.id)
-            dbPower.name = power.name
-            dbPowers.append(dbPower)
-        }
-        
         let dbCharacter = DBCharacter(context: coreDataStack.managedContext)
         dbCharacter.id = Int32(character.id)
         dbCharacter.name = character.name
@@ -49,7 +41,13 @@ class DBManager: Persistence {
         dbCharacter.origin = character.origin
         
         dbCharacter.image = dbImage
-        dbCharacter.powers?.addingObjects(from: dbPowers)
+        
+        for power in character.powers {
+            let dbPower = DBPower(context: coreDataStack.managedContext)
+            dbPower.id = Int32(power.id)
+            dbPower.name = power.name
+            dbPower.character = dbCharacter
+        }
         
         coreDataStack.saveContext()
     }
